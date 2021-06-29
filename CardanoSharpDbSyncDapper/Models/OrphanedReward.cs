@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace CardanoSharpDbSyncDapper.Models
 {
+    //TODO Make Dapper required table mapping
     public partial class OrphanedReward
     {
         public long Id { get; set; }
