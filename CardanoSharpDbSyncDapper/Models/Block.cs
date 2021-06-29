@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
     [Table(TableNames.Block)]
     public partial class Block

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.TxOut)]
     public partial class TxOut
     {
         public TxOut()

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CardanoSharpDbSyncDapper.Common;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.PoolUpdate)]
     public partial class PoolUpdate
     {
         public PoolUpdate()

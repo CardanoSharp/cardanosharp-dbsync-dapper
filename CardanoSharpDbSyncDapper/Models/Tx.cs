@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CardanoSharp.DbSync.EntityFramework.Models;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.Tx)]
     public partial class Tx
     {
         public Tx()

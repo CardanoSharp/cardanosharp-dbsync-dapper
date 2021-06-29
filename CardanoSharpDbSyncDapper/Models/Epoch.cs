@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CardanoSharpDbSyncDapper.Common;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
 namespace CardanoSharp.DbSync.EntityFramework.Models
 {
+    [Table(TableNames.Epoch)]
     public partial class Epoch
     {
         public long Id { get; set; }

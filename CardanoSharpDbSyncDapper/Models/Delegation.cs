@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using CardanoSharpDbSyncDapper.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.Delegation)]
     public partial class Delegation
     {
         public long Id { get; set; }

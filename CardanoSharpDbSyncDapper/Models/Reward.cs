@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CardanoSharpDbSyncDapper.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
-namespace CardanoSharp.DbSync.EntityFramework.Models
+namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.Reward)]
     public partial class Reward
     {
         public long Id { get; set; }
