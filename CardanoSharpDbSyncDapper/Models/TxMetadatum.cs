@@ -1,11 +1,12 @@
-﻿using CardanoSharpDbSyncDapper.Models;
-using System;
-using System.Collections.Generic;
+﻿using CardanoSharpDbSyncDapper.Common;
+using CardanoSharpDbSyncDapper.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
 namespace CardanoSharp.DbSync.EntityFramework.Models
 {
+    [Table(TableNames.TxMetadatum)]
     public partial class TxMetadatum
     {
         public long Id { get; set; }

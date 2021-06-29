@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CardanoSharpDbSyncDapper.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
 namespace CardanoSharpDbSyncDapper.Models
 {
+    [Table(TableNames.Withdrawal)]
     public partial class Withdrawal
     {
         public long Id { get; set; }

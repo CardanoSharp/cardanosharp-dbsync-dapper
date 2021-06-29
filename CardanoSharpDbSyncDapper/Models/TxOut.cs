@@ -1,5 +1,6 @@
-﻿using System;
+﻿using CardanoSharpDbSyncDapper.Common;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
