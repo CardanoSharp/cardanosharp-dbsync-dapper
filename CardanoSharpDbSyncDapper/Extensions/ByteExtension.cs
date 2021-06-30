@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CardanoSharpDbSyncDapper.Extensions
 {
@@ -9,7 +7,6 @@ namespace CardanoSharpDbSyncDapper.Extensions
         public static string GetHex(this byte[] ba)
         {
             return BitConverter.ToString(ba).Replace("-", "").ToLower();
-
         }
     }
 }
