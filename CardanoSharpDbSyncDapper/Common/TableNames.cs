@@ -8,7 +8,7 @@ namespace CardanoSharpDbSyncDapper.Common
 {
     public static class TableNames
     {
-        public const string Block = "public.block";
+        public const string Block = "Block";
         public const string Delegation = "public.delegation";
         public const string Epoch = "public.epoch";
         public const string EpochParam = "public.epoch_param";
@@ -37,5 +37,6 @@ namespace CardanoSharpDbSyncDapper.Common
         public const string TxOut = "public.tx_out";
         public const string UtxoView = "public.utxo_view";
         public const string Withdrawal = "public.withdrawal";
+        public const string OrphanedReward = "OrphanedReward";
     }
 }

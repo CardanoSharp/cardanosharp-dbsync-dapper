@@ -1,11 +1,13 @@
-﻿using System;
+﻿using CardanoSharpDbSyncDapper.Common;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
 namespace CardanoSharpDbSyncDapper.Models
 {
-    //TODO Make Dapper required table mapping
+    [Table(TableNames.OrphanedReward)]
     public partial class OrphanedReward
     {
         public long Id { get; set; }
