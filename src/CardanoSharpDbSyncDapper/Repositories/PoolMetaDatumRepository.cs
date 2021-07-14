@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IPoolMetaDatumRepository : IRepository<PoolMetaDatum>
+    public interface IPoolMetaDatumRepository : IGenericRepository<PoolMetaDatum>
     {
     }
-    public class PoolMetaDatumRepository : Repository<PoolMetaDatum>, IPoolMetaDatumRepository
+    public class PoolMetaDatumRepository : GenericRepository<PoolMetaDatum>, IPoolMetaDatumRepository
     {
         public PoolMetaDatumRepository(IConfiguration configuration)
             : base(configuration, TableNames.PoolMetaDatum) { }

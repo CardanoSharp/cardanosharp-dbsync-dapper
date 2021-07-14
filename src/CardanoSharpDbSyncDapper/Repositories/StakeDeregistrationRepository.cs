@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IStakeDeregistrationRepository : IRepository<StakeDeregistration>
+    public interface IStakeDeregistrationRepository : IGenericRepository<StakeDeregistration>
     {
     }
-    public class StakeDeregistrationRepository : Repository<StakeDeregistration>, IStakeDeregistrationRepository
+    public class StakeDeregistrationRepository : GenericRepository<StakeDeregistration>, IStakeDeregistrationRepository
     {
         public StakeDeregistrationRepository(IConfiguration configuration)
             : base(configuration, TableNames.StakeDeregistration) { }

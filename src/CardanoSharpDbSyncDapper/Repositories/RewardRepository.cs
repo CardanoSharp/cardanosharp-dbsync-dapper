@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IRewardRepository : IRepository<Reward>
+    public interface IRewardRepository : IGenericRepository<Reward>
     {
     }
-    public class RewardRepository : Repository<Reward>, IRewardRepository
+    public class RewardRepository : GenericRepository<Reward>, IRewardRepository
     {
         public RewardRepository(IConfiguration configuration)
             : base(configuration, TableNames.Reward) { }

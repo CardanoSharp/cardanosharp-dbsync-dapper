@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface ISlotLeaderRepository : IRepository<SlotLeader>
+    public interface ISlotLeaderRepository : IGenericRepository<SlotLeader>
     {
     }
-    public class SlotLeaderRepository : Repository<SlotLeader>, ISlotLeaderRepository
+    public class SlotLeaderRepository : GenericRepository<SlotLeader>, ISlotLeaderRepository
     {
         public SlotLeaderRepository(IConfiguration configuration)
             : base(configuration, TableNames.SlotLeader) { }

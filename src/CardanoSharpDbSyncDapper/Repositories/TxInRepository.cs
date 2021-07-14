@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface ITxInRepository : IRepository<TxIn>
+    public interface ITxInRepository : IGenericRepository<TxIn>
     {
     }
-    public class TxInRepository : Repository<TxIn>, ITxInRepository
+    public class TxInRepository : GenericRepository<TxIn>, ITxInRepository
     {
         public TxInRepository(IConfiguration configuration)
             : base(configuration, TableNames.TxIn) { }

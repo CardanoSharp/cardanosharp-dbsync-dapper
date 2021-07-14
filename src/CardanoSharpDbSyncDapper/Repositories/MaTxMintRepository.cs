@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IMaTxMintRepository : IRepository<MaTxMint>
+    public interface IMaTxMintRepository : IGenericRepository<MaTxMint>
     {
     }
-    public class MaTxMintRepository : Repository<MaTxMint>, IMaTxMintRepository
+    public class MaTxMintRepository : GenericRepository<MaTxMint>, IMaTxMintRepository
     {
         public MaTxMintRepository(IConfiguration configuration)
             : base(configuration, TableNames.MaTxMint) { }

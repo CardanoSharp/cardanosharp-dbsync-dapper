@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IWithdrawalRepository : IRepository<Withdrawal>
+    public interface IWithdrawalRepository : IGenericRepository<Withdrawal>
     {
     }
-    public class WithdrawalRepository : Repository<Withdrawal>, IWithdrawalRepository
+    public class WithdrawalRepository : GenericRepository<Withdrawal>, IWithdrawalRepository
     {
         public WithdrawalRepository(IConfiguration configuration)
             : base(configuration, TableNames.Withdrawal) { }

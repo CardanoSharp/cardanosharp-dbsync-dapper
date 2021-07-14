@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IParamProposalRepository : IRepository<ParamProposal>
+    public interface IParamProposalRepository : IGenericRepository<ParamProposal>
     {
     }
-    public class ParamProposalRepository : Repository<ParamProposal>, IParamProposalRepository
+    public class ParamProposalRepository : GenericRepository<ParamProposal>, IParamProposalRepository
     {
         public ParamProposalRepository(IConfiguration configuration)
             : base(configuration, TableNames.ParamProposal) { }

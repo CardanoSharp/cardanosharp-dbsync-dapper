@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IUtxoViewRepository : IRepository<UtxoView>
+    public interface IUtxoViewRepository : IGenericRepository<UtxoView>
     {
     }
-    public class UtxoViewRepository : Repository<UtxoView>, IUtxoViewRepository
+    public class UtxoViewRepository : GenericRepository<UtxoView>, IUtxoViewRepository
     {
         public UtxoViewRepository(IConfiguration configuration)
             : base(configuration, TableNames.UtxoView) { }

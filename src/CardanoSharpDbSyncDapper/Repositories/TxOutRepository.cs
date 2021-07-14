@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface ITxOutRepository : IRepository<TxOut>
+    public interface ITxOutRepository : IGenericRepository<TxOut>
     {
     }
-    public class TxOutRepository : Repository<TxOut>, ITxOutRepository
+    public class TxOutRepository : GenericRepository<TxOut>, ITxOutRepository
     {
         public TxOutRepository(IConfiguration configuration)
             : base(configuration, TableNames.TxOut) { }

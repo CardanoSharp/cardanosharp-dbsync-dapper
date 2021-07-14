@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface ITxRepository : IRepository<Tx>
+    public interface ITxRepository : IGenericRepository<Tx>
     {
         Task<Tx> GetByHashStrAsync(string hashStr);
     }
-    public class TxRepository : Repository<Tx>, ITxRepository
+    public class TxRepository : GenericRepository<Tx>, ITxRepository
     {
         public TxRepository(IConfiguration configuration)
             : base(configuration, TableNames.Tx) { }

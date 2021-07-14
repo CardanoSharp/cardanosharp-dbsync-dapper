@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IPoolRelayRepository : IRepository<PoolRelay>
+    public interface IPoolRelayRepository : IGenericRepository<PoolRelay>
     {
     }
-    public class PoolRelayRepository : Repository<PoolRelay>, IPoolRelayRepository
+    public class PoolRelayRepository : GenericRepository<PoolRelay>, IPoolRelayRepository
     {
         public PoolRelayRepository(IConfiguration configuration)
             : base(configuration, TableNames.PoolRelay) { }

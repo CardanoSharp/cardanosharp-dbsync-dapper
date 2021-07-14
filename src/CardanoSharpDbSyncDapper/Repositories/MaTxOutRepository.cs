@@ -1,17 +1,17 @@
-﻿using CardanoSharpDbSyncDapper.Common;
+﻿using Application.Common;
+using CardanoSharpDbSyncDapper.Common;
 using CardanoSharpDbSyncDapper.Models;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IMaTxOutRepository : IRepository<MaTxOut>
+    public interface IMaTxOutRepository : IGenericRepository<MaTxOut>
     {
     }
-    public class MaTxOutRepository : Repository<MaTxOut>, IMaTxOutRepository
+    public class MaTxOutRepository : GenericRepository<MaTxOut>, IMaTxOutRepository
     {
-        public MaTxOutRepository(IConfiguration configuration)
+        public MaTxOutRepository(ICardanoDbConnection configuration)
             : base(configuration, TableNames.MaTxOut) { }
     }
 }

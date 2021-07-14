@@ -1,17 +1,17 @@
-﻿using CardanoSharpDbSyncDapper.Common;
+﻿using Application.Common;
+using CardanoSharpDbSyncDapper.Common;
 using CardanoSharpDbSyncDapper.Models;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IMetumRepository : IRepository<Metum>
+    public interface IMetumRepository : IGenericRepository<Metum>
     {
     }
-    public class MetumRepository : Repository<Metum>, IMetumRepository
+    public class MetumRepository : GenericRepository<Metum>, IMetumRepository
     {
-        public MetumRepository(IConfiguration configuration)
+        public MetumRepository(ICardanoDbConnection configuration)
             : base(configuration, TableNames.Metum) { }
     }
 }

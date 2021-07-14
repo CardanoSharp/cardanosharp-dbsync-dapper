@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface ITxMetadatumRepository : IRepository<TxMetadatum>
+    public interface ITxMetadatumRepository : IGenericRepository<TxMetadatum>
     {
     }
-    public class TxMetadatumRepository : Repository<TxMetadatum>, ITxMetadatumRepository
+    public class TxMetadatumRepository : GenericRepository<TxMetadatum>, ITxMetadatumRepository
     {
         public TxMetadatumRepository(IConfiguration configuration)
             : base(configuration, TableNames.TxMetadatum) { }

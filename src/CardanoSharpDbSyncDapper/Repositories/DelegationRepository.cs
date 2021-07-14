@@ -1,4 +1,5 @@
-﻿using CardanoSharpDbSyncDapper.Common;
+﻿using Application.Common;
+using CardanoSharpDbSyncDapper.Common;
 using CardanoSharpDbSyncDapper.Models;
 using Microsoft.Extensions.Configuration;
 
@@ -6,12 +7,12 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IDelegationRepository : IRepository<Delegation>
+    public interface IDelegationRepository : IGenericRepository<Delegation>
     {
     }
-    public class DelegationRepository : Repository<Delegation>, IDelegationRepository
+    public class DelegationRepository : GenericRepository<Delegation>, IDelegationRepository
     {
-        public DelegationRepository(IConfiguration configuration)
+        public DelegationRepository(ICardanoDbConnection configuration)
             : base(configuration, TableNames.Delegation) { }
     }
 }

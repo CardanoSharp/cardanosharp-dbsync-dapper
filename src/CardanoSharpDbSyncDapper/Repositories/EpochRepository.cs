@@ -1,17 +1,17 @@
-﻿using CardanoSharpDbSyncDapper.Common;
+﻿using Application.Common;
+using CardanoSharpDbSyncDapper.Common;
 using CardanoSharpDbSyncDapper.Models;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IEpochRepository : IRepository<Epoch>
+    public interface IEpochRepository : IGenericRepository<Epoch>
     {
     }
-    public class EpochRepository : Repository<Epoch>, IEpochRepository
+    public class EpochRepository : GenericRepository<Epoch>, IEpochRepository
     {
-        public EpochRepository(IConfiguration configuration)
+        public EpochRepository(ICardanoDbConnection configuration)
             : base(configuration, TableNames.Epoch) { }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CardanoSharpDbSyncDapper.Common;
+﻿using Application.Common;
+using CardanoSharpDbSyncDapper.Common;
 using CardanoSharpDbSyncDapper.Models;
 using Microsoft.Extensions.Configuration;
 
@@ -6,12 +7,12 @@ using Microsoft.Extensions.Configuration;
 
 namespace CardanoSharpDbSyncDapper.Repositories
 {
-    public interface IEpochParamRepository : IRepository<EpochParam>
+    public interface IEpochParamRepository : IGenericRepository<EpochParam>
     {
     }
-    public class EpochParamRepository : Repository<EpochParam>, IEpochParamRepository
+    public class EpochParamRepository : GenericRepository<EpochParam>, IEpochParamRepository
     {
-        public EpochParamRepository(IConfiguration configuration)
+        public EpochParamRepository(ICardanoDbConnection configuration)
             : base(configuration, TableNames.EpochParam) { }
     }
 }
