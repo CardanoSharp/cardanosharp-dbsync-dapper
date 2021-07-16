@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\CardanoSharpDbSyncDapper\Application.csproj", "{03DFC6B9-2C88-4EE4-A092-F89F2F040FB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration Test", "tests\Integration Tests\TestProject1\Integration Test.csproj", "{51754C54-E928-432C-9F9D-5EDBC0F55CAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integration Test", "tests\Integration Tests\TestProject1\Integration Test.csproj", "{51754C54-E928-432C-9F9D-5EDBC0F55CAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

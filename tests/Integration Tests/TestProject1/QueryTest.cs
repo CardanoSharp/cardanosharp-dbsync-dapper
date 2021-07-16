@@ -16,8 +16,6 @@ namespace TestProject1
             string _tableName = "block"; 
             using (var conn = GetConnection)
             {
-                try
-                {
                     conn.Open();
                     var result = conn.Query(
                         $"select * from {_tableName} where block_number = '2'",
@@ -27,7 +25,7 @@ namespace TestProject1
                         });
 
                     Assert.Single(result.AsList());
-                }
+
             }
 
         }
