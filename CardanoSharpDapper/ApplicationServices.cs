@@ -3,6 +3,7 @@ using Dapper.FluentMap;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using System.Data;
+using Microsoft.Extensions.DependencyInjection; 
 
 namespace Application
 {

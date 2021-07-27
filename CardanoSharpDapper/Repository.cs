@@ -1,7 +1,4 @@
-﻿using Application.Common;
-using Microsoft.Extensions.Configuration;
-using Npgsql;
-using System.Data;
+﻿using System.Data;
 
 namespace CardanoSharpDbSyncDapper
 {
