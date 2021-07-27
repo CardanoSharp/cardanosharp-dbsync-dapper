@@ -1,7 +1,6 @@
 ﻿using CardanoSharpDbSyncDapper.Mappings;
 using Dapper.FluentMap;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 using System.Data;
 

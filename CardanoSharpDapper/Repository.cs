@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Npgsql;
 using System.Data;
 
-namespace Application
+namespace CardanoSharpDbSyncDapper
 {
     public interface IRepository
     {
