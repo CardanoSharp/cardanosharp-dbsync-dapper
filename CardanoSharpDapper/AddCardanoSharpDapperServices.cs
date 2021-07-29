@@ -3,19 +3,19 @@ using Dapper.FluentMap;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using System.Data;
-using Microsoft.Extensions.DependencyInjection; 
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
 {
-    public static class ApplicationServices
+    public static class AddCardanoSharpDapperServices
     {
-        public static IServiceCollection AddDependencies(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddDependencies(this IServiceCollection services, IConfiguration configuration, string connectionString)
         {
             // Read the connection string from appsettings.
-            string dbConnectionString = configuration.GetConnectionString("CardanoDbSync");
+            string dbConnectionString = configuration.GetConnectionString(connectionString);
             // Inject IDbConnection, with implementation from SqlConnection class.
             services.AddTransient<IDbConnection>((sp) => new NpgsqlConnection(dbConnectionString));
-            
+
             FluentMapper.Initialize(c =>
                 {
                     c.AddMap(new BlockMap());
@@ -47,6 +47,7 @@ namespace Application
                     c.AddMap(new TxMetadatumMap());
                     c.AddMap(new UtxoViewMap());
                     c.AddMap(new WithdrawalMap());
+                    c.AddMap(new OrphanRewardsMap());
                 });
 
             return services;

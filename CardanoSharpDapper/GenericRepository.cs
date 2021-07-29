@@ -29,50 +29,46 @@ namespace CardanoSharpDbSyncDapper
 
         public virtual async Task<T> GetByIdAsync(int id)
         {
-            using (var conn = GetConnection)
+            using var conn = GetConnection;
+            try
             {
-                try
-                {
-                    conn.Open();
-                    return await conn.QuerySingleOrDefaultAsync<T>(
-                        $"select * from {_tableName} where id = @Id",
-                        new
-                        {
-                            TableName = _tableName,
-                            Id = id
-                        });
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(e.Message, e);
-                }
+                conn.Open();
+                return await conn.QuerySingleOrDefaultAsync<T>(
+                    $"select * from {_tableName} where id = @Id",
+                    new
+                    {
+                        TableName = _tableName,
+                        Id = id
+                    });
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message, e);
             }
         }
 
         public async Task<IEnumerable<T>> GetPagedListAsync(int pageSize, int pageNumber, TableSort sort = TableSort.Asc)
         {
-            using (var conn = GetConnection)
+            using var conn = GetConnection;
+            try
             {
-                try
-                {
-                    conn.Open();
-                    return await conn.QueryAsync<T>(
-                        $@"select * from {_tableName} 
+                conn.Open();
+                return await conn.QueryAsync<T>(
+                    $@"select * from {_tableName} 
                             order by id {sort}
                             limit @PageSize
                             offset @PageNumber",
-                        new
-                        {
-                            TableName = _tableName,
-                            Sort = sort.ToString(),
-                            PageSize = pageSize,
-                            PageNumber = pageSize * pageNumber
-                        });
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(e.Message, e);
-                }
+                    new
+                    {
+                        TableName = _tableName,
+                        Sort = sort.ToString(),
+                        PageSize = pageSize,
+                        PageNumber = pageSize * pageNumber
+                    });
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message, e);
             }
         }
     }

@@ -13,20 +13,17 @@ namespace TestProject1
         [Fact]
         public void GetBlockNumberAsync()
         {
-            string _tableName = "block"; 
-            using (var conn = GetConnection)
-            {
-                    conn.Open();
-                    var result = conn.Query(
-                        $"select * from {_tableName} where block_number = '2'",
-                        new
-                        {
-                            TableName = _tableName,
-                        });
+            string _tableName = "block";
+            using var conn = GetConnection;
+            conn.Open();
+            var result = conn.Query(
+                    $"select * from {_tableName} where block_number = '2'",
+                    new
+                    {
+                        TableName = _tableName,
+                    });
 
-                    Assert.Single(result.AsList());
-
-            }
+            Assert.Single(result.AsList());
 
         }
     }
