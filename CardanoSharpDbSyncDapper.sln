@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integration Test", "tests\Integration Tests\TestProject1\Integration Test.csproj", "{51754C54-E928-432C-9F9D-5EDBC0F55CAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardanoSharpDbSyncDapper", "CardanoSharpDbSyncDapper\CardanoSharpDbSyncDapper.csproj", "{9B80128F-B0AA-4028-BEAA-EB44F794ABAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardanoSharpDbSyncDapper", "CardanoSharpDapper\CardanoSharpDbSyncDapper.csproj", "{1A3751D6-6839-47BE-BCAD-3FAD69DC098B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{51754C54-E928-432C-9F9D-5EDBC0F55CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51754C54-E928-432C-9F9D-5EDBC0F55CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51754C54-E928-432C-9F9D-5EDBC0F55CAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B80128F-B0AA-4028-BEAA-EB44F794ABAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B80128F-B0AA-4028-BEAA-EB44F794ABAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B80128F-B0AA-4028-BEAA-EB44F794ABAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B80128F-B0AA-4028-BEAA-EB44F794ABAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3751D6-6839-47BE-BCAD-3FAD69DC098B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3751D6-6839-47BE-BCAD-3FAD69DC098B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3751D6-6839-47BE-BCAD-3FAD69DC098B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3751D6-6839-47BE-BCAD-3FAD69DC098B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
